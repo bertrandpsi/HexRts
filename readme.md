@@ -11,3 +11,5 @@ To be able to start the project on your PC, restore the client side library by r
 The project can be hosted easily on any .NET 5 supported platform.
 
 Code, ideas and art are (c) Alain Bertrand. Feel free to re-use the logic and the art as you want as long a credits are given.
+
+This code is extracted from the project: [Ludiculus](https://www.ludiculus.com/)
