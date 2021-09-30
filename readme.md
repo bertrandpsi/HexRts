@@ -2,7 +2,7 @@
 
 A relatively simple Real Time Strategy game on an hexagonal grid.
 
-https://raw.githubusercontent.com/bertrandpsi/HexRts/master/HexRts/wwwroot/images/hexrts/screen_1.png
+![Preview](https://github.com/bertrandpsi/HexRts/blob/master/HexRts/wwwroot/images/hexrts/screen_1.png?raw=true)
 
 The logic runs all on the backend (ASP.NET 5.0) and communicate to the frontend via SignalR.
 
