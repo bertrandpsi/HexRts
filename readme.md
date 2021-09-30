@@ -1,4 +1,4 @@
-#Hex RTS
+# Hex RTS
 
 A relatively simple Real Time Strategy game on an hexagonal grid.
 
