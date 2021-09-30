@@ -1,0 +1,212 @@
+﻿@font-color: #dedede;
+@link-font-color: #ead9bc;
+@background-color: #231a1a;
+@button-background: #629be1;
+@button-text: #FFFFFF;
+
+body
+{
+    margin: 0px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html
+{
+    font-size: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: @font-color;
+    background-color: @background-color;
+}
+
+.link
+{
+    color: @link-font-color;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
+
+    &:hover
+    {
+        color: darken(@link-font-color, 20%);
+        transition: all 0.2s;
+    }
+}
+
+.button
+{
+    .link;
+    background-color: @button-background;
+    color: @button-text;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.container
+{
+}
+
+#connection
+{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    &:after
+    {
+        content: "Not connected...";
+    }
+
+    font-weight: bold;
+    color: red;
+}
+
+.connected
+{
+    &:after
+    {
+        content: "Connected" !important;
+    }
+
+    color: green !important;
+}
+
+
+#gameResultContainer
+{
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+
+#gameResult
+{
+    background-color: rgba(0,0,0,0.4);
+    width: 300px;
+    padding: 10px;
+    top: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    position: absolute;
+    border: solid 3px black;
+    font-size: 50px;
+    text-align: center;
+}
+
+.bigGameResult
+{
+    width: 400px !important;
+}
+
+.gameResultDetails
+{
+    font-size: 30px;
+    height: 40vh;
+    overflow-y: auto;
+    text-align: left;
+
+    table
+    {
+        width: ~"calc(100% - 20px)";
+        border: solid 1px @font-color;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+        table td:nth-child(2)
+        {
+            text-align: right;
+        }
+}
+
+
+.helpTitle
+{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+#gameHelp
+{
+    color: white;
+    font-size: 20px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: solid 1px black;
+    position: absolute;
+
+    & > div:nth-child(1)
+    {
+        background-color: rgba(0,0,0,0.7);
+        left: 0px;
+        right: 0px;
+        bottom: 100px;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        height: 100%;
+        padding: 20px;
+        border: solid 2px black;
+
+        table
+        {
+            width: 100%;
+        }
+
+        padding-bottom: 100px;
+    }
+
+    & > div:nth-child(2)
+    {
+        position: fixed;
+        text-align: center;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background-color: #000000;
+
+        span
+        {
+            width: 100px;
+        }
+    }
+}
+
+@media screen and (min-width: 1800px)
+{
+    #textContent
+    {
+        width: 1600px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    #gameHelp > div:nth-child(1)
+    {
+        width: 1600px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+@import "hexrts.less";

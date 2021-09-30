@@ -1,0 +1,70 @@
+﻿@page
+@model HexRts.Pages.IndexModel
+@{
+    ViewData["Title"] = "Hex RTS";
+    Layout = "_Layout";
+}
+<div id="hexGame">
+    <canvas width="1650" height="1250" id="gameCanvas"></canvas>
+    <div id="hexTraderButtons">
+        <div id="hexBlue" build="person">
+            <span>Worker</span>
+        </div>
+        <div id="hexRed" build="person">
+            <span>Worker</span>
+        </div>
+        <div id="hexRoad" build="road">
+            <span>Road</span>
+        </div>
+        <div id="hexHouse" build="house">
+            <span>House</span>
+        </div>
+        <div id="hexCity" build="city">
+            <span>City</span>
+        </div>
+        <div id="hexCultivation" build="cultivation">
+            <span>Cultivation</span>
+        </div>
+        <div id="hexLodge" build="lodge">
+            <span>Lodge</span>
+        </div>
+        <div id="hexMonument" build="monument">
+            <span>Monument</span>
+        </div>
+        <div id="hexHelp" build="?">
+            <span>Help</span>
+        </div>
+    </div>
+</div>
+<div id="gameHelp">
+    <div>
+        <h1>HexTrader</h1>
+        HexTrader is a quick Real Time Strategy game. You may win the game in two ways: kill all opponent's workers or build a monument before your opponent.
+        The first step is to place your house. Keep in mind that without an house or a city you will not be able to survive.<br />
+        <br />
+        <center><img src="/images/hexrts/screen_1.png" /></center><br />
+        <br />
+        <b>Resources:</b><br />
+        <table>
+            <tr><td>Wood</td><td>Produced by a lodge in the forest</td></tr>
+            <tr><td>Bricks</td><td>Produced by a lodge on the swamp</td></tr>
+            <tr><td>Food</td><td>Produced by a cultivation on the grass</td></tr>
+            <tr><td>Iron</td><td>Produced by a lodge in the mountains</td></tr>
+        </table>
+        <br />
+        To use the menu (on desktop) click on the left menu icon you want to use, and then click on the map.<br />
+        On the map itself you can click on a cell to execute actions valid on that cell, or you can select workers by clicking on them.<br />
+        <br />
+        Walk speed of your workers depends on the terrain they are on. You may speed up their walk by construction roads, however roads cannot be built over mountains.<br />
+        <br />
+        Press the button ok on the bottom of the page to start.
+    </div>
+    <div>
+        <span class="button">Ok</span>
+    </div>
+</div>
+<div id="gameResultContainer">
+    <div id="gameResult">--  --</div>
+</div>
+<script src="/js/hextrts.js" asp-append-version="true"></script>
+<script src="/lib/microsoft-signalr/signalr.min.js"></script>
